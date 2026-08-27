@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="xc_body">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img">
+  </div>
+
+  <main>
+    <section class="xc_herosection xc_gobalpadding" style="padding: 4.5rem 0 5.5rem;">
+      <div class="xc_herosectionblur"></div>
+      <div class="xc_maxwidth">
+        <div class="auth-grid-layout">
+          
+          <!-- Left Info -->
+          <div style="text-align: left;">
+            <a href="index.html" class="xc_brand" style="margin-bottom: 2rem;">
+              <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+              <span>Stackly</span>
+            </a>
+            <div class="xc_eyebrotext">Secure Access Gateway</div>
+            <h1 class="xc_h1" style="font-size: 2.8rem;">Access Intelligent <br>Healthcare AI Grid</h1>
+            <p class="xc_subheadline" style="margin-bottom: 2rem;">
+              Sign in to manage hospital ICU capacity, automate CMCHIS insurance claims, and inspect state-wide epidemiological alerts.
+            </p>
+          </div>
+
+          <!-- Right Login Box -->
+          <div class="auth-card-box">
+            
+            <!-- Dual Role Switcher -->
+            <div style="display: flex; background: #f1f5f9; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); padding: 0.35rem; margin-bottom: 1.75rem;">
+              <button class="auth-tab-btn active" data-role="client" style="flex: 1; padding: 0.6rem; border: none; border-radius: var(--radius-pill); background: var(--accent-cyan-light); color: var(--accent-cyan); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+                <i class="fa-solid fa-hospital"></i> Client Portal
+              </button>
+              <button class="auth-tab-btn" data-role="admin" style="flex: 1; padding: 0.6rem; border: none; border-radius: var(--radius-pill); background: transparent; color: var(--text-body); font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; cursor: pointer;">
+                <i class="fa-solid fa-gears"></i> Admin Control
+              </button>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <h3 id="auth-role-label" class="xc_h3" style="font-size: 1.15rem; margin-bottom: 0.25rem;">Hospital Doctor & Client Portal</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Sign in with your hospital credentials</p>
+            </div>
+
+            <form id="main-login-form">
+              <div style="margin-bottom: 1.15rem;">
+                <label for="login-username" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Username / Name</label>
+                <input type="text" id="login-username" name="username" style="width: 100%; padding: 0.85rem 1.15rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="username" required>
+              </div>
+
+              <div style="margin-bottom: 1.15rem;">
+                <label for="login-email" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Email Address</label>
+                <input type="email" id="login-email" name="email" style="width: 100%; padding: 0.85rem 1.15rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="example@gmail.com" required>
+              </div>
+
+              <div style="margin-bottom: 1.15rem;">
+                <label for="login-password" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Password</label>
+                <input type="password" id="login-password" name="password" style="width: 100%; padding: 0.85rem 1.15rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="••••••••" required>
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.35rem; font-size: 0.825rem;">
+                <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; color: var(--text-body);">
+                  <input type="checkbox" checked style="accent-color: var(--accent-cyan);"> Keep me logged in
+                </label>
+                <a href="404.html" style="color: var(--accent-cyan); font-weight: 600;">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="xc_button primary" style="width: 100%;">Sign In</button>
+              <a href="index.html" class="xc_button secondary" style="width: 100%; margin-top: 0.75rem; justify-content: center; text-align: center;"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+              <div style="margin-top: 1.25rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+                Don't have an account? <a href="signup.html" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none;">Sign Up</a>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

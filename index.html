@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="xc_body">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img">
+  </div>
+
+  <!-- Header & Navbar (4 Nav Items, No Dropdowns, Login Button) -->
+  <header class="xc_header">
+    <div class="xc_maxwidth">
+      <div class="xc_navbar_wapper">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="xc_brand">
+          <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 4 Clean Navlist Items -->
+        <nav class="xc_navlinkswapper">
+          <a href="index.html" class="xc_navlinks active">Home</a>
+          <a href="solutions.html" class="xc_navlinks">Solutions</a>
+          <a href="analytics.html" class="xc_navlinks">Analytics</a>
+          <a href="about.html" class="xc_navlinks">About Us</a>
+        </nav>
+
+        <!-- Right Login Button (Replaces Talk to Us) & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="login.html" class="xc_button primary navbar">Login</a>
+          <button class="mobile_toggle_btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Hero Section -->
+    <section class="xc_herosection xc_gobalpadding">
+      <div class="xc_herosectionblur"></div>
+      <div class="xc_maxwidth">
+        <div class="xc_herowapper">
+          <div class="xc_headlinewapper">
+            <div class="xc_eyebrotext">Autonomous Healthcare AI</div>
+            <h1 class="xc_h1">The Agentic Digital <br>Health Platform</h1>
+            <p class="xc_subheadline">
+              Purpose-built to automate and scale healthcare data work across modern hospital networks using intelligent AI agents and a deeply integrated clinical data fabric.
+            </p>
+          </div>
+
+          <div class="w-layout-vflex xc_ctawapeper">
+            <a href="login.html" class="xc_button primary">Get Started with Stackly</a>
+            <a href="solutions.html" class="xc_button secondary">Explore Solutions</a>
+          </div>
+        </div>
+
+        <!-- Hero High-Tech Live Telemetry Terminal Frame -->
+        <div class="xc_heroimagewapper">
+          <div class="xc_heroimage" style="padding: 2rem; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span class="pulse-dot"></span>
+                <span style="font-family: var(--font-heading); font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">STACKLY AGENT ENGINE v4.2 // INTELLIGENT HEALTH GRID</span>
+              </div>
+              <div class="xc_eyebrotext" style="margin-bottom: 0; font-size: 0.7rem;">450+ CONNECTED NODES</div>
+            </div>
+
+            <div class="xc_usercasecards" style="gap: 1.25rem;">
+              <div style="background: rgba(2, 132, 199, 0.05); border: 1px solid rgba(2, 132, 199, 0.2); border-radius: 14px; padding: 1.25rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-heading); font-weight: 700;">TELE-ICU PREDICTIVE AGENT</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--accent-cyan); margin: 0.25rem 0;">99.4% Precision</div>
+                <div style="font-size: 0.8rem; color: var(--text-body);">Early sepsis warning 6-12h prior</div>
+              </div>
+
+              <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 14px; padding: 1.25rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-heading); font-weight: 700;">CMCHIS REVENUE AGENT</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #16a34a; margin: 0.25rem 0;">₹ 42+ Crores</div>
+                <div style="font-size: 0.8rem; color: var(--text-body);">Auto-coded claim recovery</div>
+              </div>
+
+              <div style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 14px; padding: 1.25rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-heading); font-weight: 700;">ABDM INTEROP GATEWAY</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #7c3aed; margin: 0.25rem 0;">12.4M Records</div>
+                <div style="font-size: 0.8rem; color: var(--text-body);">Encrypted ABHA health exchange</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Use Cases (Exact 6 Cards) -->
+    <section class="xc_usecasesection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Use Cases</div>
+          <h2 class="xc_h2">Built to Solve Healthcare Challenges</h2>
+          <p class="xc_subheadline">
+            Stackly helps healthcare organizations shift from fragmented tools to a unified platform that scales seamlessly across departments, systems, and clinical use cases.
+          </p>
+        </div>
+
+        <div class="xc_usercasecards">
+          <div class="xc_usecases1">
+            <h3 class="xc_h3">Interoperability, <br>Integrations & Access</h3>
+            <div class="xc_usercase_cardbody">
+              Deliver seamless data access across EHR systems to unlock real-time clinical workflows, improve speed to market, and reduce engineering complexity across modern hospital networks.
+            </div>
+          </div>
+
+          <div class="xc_usecases2">
+            <h3 class="xc_h3">Data Mgmt, <br>Ops & Analytics</h3>
+            <div class="xc_usercase_cardbody">
+              Fuel analytics, automation, and compliance with clean, normalized data, so your clinical teams can focus on patient outcomes, not legacy infrastructure.
+            </div>
+          </div>
+
+          <div class="xc_usecases3">
+            <h3 class="xc_h3">Care Team <br>Collaboration</h3>
+            <div class="xc_usercase_cardbody">
+              Augment existing clinical workflows with AI agents that streamline ICU communication, patient routing, and task triage without adding administrative friction.
+            </div>
+          </div>
+
+          <div class="xc_usecases4">
+            <h3 class="xc_h3">Population Health <br>Management</h3>
+            <div class="xc_usercase_cardbody">
+              Enhance district syndromic fever surveillance by embedding agents that unify fragmented hospital data and automate proactive outbreak tracking.
+            </div>
+          </div>
+
+          <div class="xc_usecases5">
+            <h3 class="xc_h3">Digital <br>Front Door</h3>
+            <div class="xc_usercase_cardbody">
+              Power emergency intake and triage workflows that deliver seamless patient experiences, unify ABHA records, and adapt dynamically to ICU bed load.
+            </div>
+          </div>
+
+          <div class="xc_usecases6">
+            <h3 class="xc_h3">Revenue Cycle <br>Management</h3>
+            <div class="xc_usercase_cardbody">
+              Accelerate CMCHIS scheme reimbursement and prevent revenue leakage by powering billing workflows with real-time, automated ICD-10 coding.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Agent Marketplace (Interactive 3 Tabs) -->
+    <section class="xc_marketplacesection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Agent Marketplace</div>
+          <h2 class="xc_h2">Reimagining the Digital Workforce in Healthcare</h2>
+          <p class="xc_subheadline">
+            Deploy agents across your hospital stack, not just to automate tasks, but to enable a new era of collaboration between clinicians, platforms, and intelligent infrastructure.
+          </p>
+        </div>
+
+        <div class="xc_tabs_marketplacewapper">
+          <div class="xc_tabs-menu_marketplace">
+            <a class="xc_tab_marketplace w--current" href="#tab1">Platform Agents</a>
+            <a class="xc_tab_marketplace" href="#tab2">Data Agents</a>
+            <a class="xc_tab_marketplace" href="#tab3">Clinical & Partner Agents</a>
+          </div>
+
+          <div class="xc_tabs_marketplacewaapper">
+            <!-- Pane 1: Platform Agents -->
+            <div class="w-tab-pane w--tab-active">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-network-wired" style="font-size: 2.2rem; color: var(--accent-cyan);"></i>
+                  <h3 class="xc_feature-tags">InterOp Agent</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">FHIR / HL7 Gateway</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-diagram-project" style="font-size: 2.2rem; color: #16a34a;"></i>
+                  <h3 class="xc_feature-tags">Data Modeling</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">EHR Schema Normalizer</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-cube" style="font-size: 2.2rem; color: #7c3aed;"></i>
+                  <h3 class="xc_feature-tags">Data Products</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">API Orchestration</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-robot" style="font-size: 2.2rem; color: #d97706;"></i>
+                  <h3 class="xc_feature-tags">Automation</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">Workflow Engine</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 2: Data Agents -->
+            <div class="w-tab-pane">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-compass" style="font-size: 2.2rem; color: var(--accent-cyan);"></i>
+                  <h3 class="xc_feature-tags">Data Navigator</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-laptop-medical" style="font-size: 2.2rem; color: #16a34a;"></i>
+                  <h3 class="xc_feature-tags">EHR Operator</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-chart-line" style="font-size: 2.2rem; color: #7c3aed;"></i>
+                  <h3 class="xc_feature-tags">Data Analytics</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-eye" style="font-size: 2.2rem; color: #d97706;"></i>
+                  <h3 class="xc_feature-tags">Data Visualization</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-shield-check" style="font-size: 2.2rem; color: #0284c7;"></i>
+                  <h3 class="xc_feature-tags">Data Quality</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-plug" style="font-size: 2.2rem; color: #0d9488;"></i>
+                  <h3 class="xc_feature-tags">EA Integrations</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-user-secret" style="font-size: 2.2rem; color: #e11d48;"></i>
+                  <h3 class="xc_feature-tags">Deidentification</h3>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-brain" style="font-size: 2.2rem; color: #a855f7;"></i>
+                  <h3 class="xc_feature-tags">Synthetic Data</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pane 3: Clinical & Partner Agents -->
+            <div class="w-tab-pane">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-file-signature" style="font-size: 2.2rem; color: var(--accent-cyan);"></i>
+                  <h3 class="xc_feature-tags">Prior Auth</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">Insurance Verification</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-id-card-clip" style="font-size: 2.2rem; color: #16a34a;"></i>
+                  <h3 class="xc_feature-tags">Digital Intake</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">ABHA Registration</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-route" style="font-size: 2.2rem; color: #7c3aed;"></i>
+                  <h3 class="xc_feature-tags">Care Navigation</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">Tele-ICU Routing</p>
+                </div>
+                <div class="xc_logo-wrapper">
+                  <i class="fa-solid fa-indian-rupee-sign" style="font-size: 2.2rem; color: #d97706;"></i>
+                  <h3 class="xc_feature-tags">CMCHIS Claims</h3>
+                  <p style="font-size: 0.8rem; color: var(--text-muted);">TN Scheme Auto-Coder</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Skills Section (Exact 6 Cards) -->
+    <section class="xc_skillssection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Skills</div>
+          <h2 class="xc_h2">Unique Skills of Stackly Agents</h2>
+          <p class="xc_subheadline">
+            Let Stackly AI agents compliment your clinical and hospital data teams with unprecedented productivity and ROI.
+          </p>
+        </div>
+
+        <div class="xc_skillscardswapper">
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Instruction-Tuned <br>Intelligence</h3>
+            <div class="xc_skillscard_cardbody">
+              Agents are pre-trained on healthcare standards like ICD-10, CPT, and CMCHIS policies, fine-tuned with your hospital's specific protocols. Custom clinical rules adapt continuously to evolving hospital workflows.
+            </div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Manage <br>Hallucinations</h3>
+            <div class="xc_skillscard_cardbody">
+              Every agent response undergoes a rigorous two-step validation: LLM outputs are grounded against local clinical knowledge bases, followed by human-in-the-loop doctor verification for safety and traceability.
+            </div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Federated Data Access <br>& Governance</h3>
+            <div class="xc_skillscard_cardbody">
+              Agents securely connect to EHRs, billing records, and clinical vitals without violating DISHA, HIPAA, or local data governance. Maintain source-level ownership with audit-logged traceability.
+            </div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Workflow <br>& Rule Orchestration</h3>
+            <div class="xc_skillscard_cardbody">
+              Agents coordinate complex hospital workflows like prior authorizations, NABH reporting, and ICU bed escalations based on dynamic rules with complete transparency and override control.
+            </div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Responsible <br>& Compliant AI</h3>
+            <div class="xc_skillscard_cardbody">
+              Engineered with layered guardrails: strict policy constraints, input/output validation, fallback behaviors, and full trace logging compliant with ABDM India and DISHA data privacy acts.
+            </div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">API & Natural <br>Language Interfaces</h3>
+            <div class="xc_skillscard_cardbody">
+              Agents are accessible via FHIR-compatible APIs or natural language conversational interfaces, supporting both developer integration and bedside nursing workflows.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Signature Glowing Card with Rotating Conic Light Beam -->
+    <section class="xc_bannersection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_glowing-card-lc">
+          <div class="xc_banner">
+            <div class="xc_headlinewapper" style="margin-bottom: 2rem;">
+              <div class="xc_eyebrotext">Health Network</div>
+              <h2 class="xc_h2">Who We Work With</h2>
+              <p class="xc_subheadline">Transforming data operations for leading healthcare systems and hospital networks</p>
+            </div>
+
+            <div class="xc_customer_logowapper">
+              <div style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-heading);"><i class="fa-solid fa-hospital" style="color: var(--accent-cyan);"></i> Apollo Hospitals</div>
+              <div style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--accent-cyan);"><i class="fa-solid fa-heart-pulse"></i> Kauvery Health</div>
+              <div style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #16a34a;"><i class="fa-solid fa-stethoscope"></i> PSG IMS Coimbatore</div>
+              <div style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: #d97706;"><i class="fa-solid fa-building-shield"></i> CMCHIS Grid TN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Platform Architecture (6 Platform Cards) -->
+    <section class="xc_platformsection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Platform Architecture</div>
+          <h2 class="xc_h2">Stackly Fabric = Models + Knowledge + Data + Tools</h2>
+          <p class="xc_subheadline">
+            Build, configure, deploy, and scale your healthcare data workforce in one seamless operating platform.
+          </p>
+        </div>
+
+        <div class="xc_platformcards">
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Data Agents</h3>
+            <div class="xc_skillscard_cardbody">Deploy from a library of pre-built agents to handle complex hospital data tasks—from navigation to ETL transformation.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Stackly Studio & Copilots</h3>
+            <div class="xc_skillscard_cardbody">A developer-friendly environment to create, test, and launch powerful clinical agents with guided copilots.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Models (SLM) & Tools</h3>
+            <div class="xc_skillscard_cardbody">Leverage specialized Small Language Models fine-tuned on clinical and operational EHR data.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Stackly Panel & Dashboards</h3>
+            <div class="xc_skillscard_cardbody">Monitor, manage, and optimize every deployed agent through intuitive dashboards and live audit logs.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Third-Party & Custom Agents</h3>
+            <div class="xc_skillscard_cardbody">Integrate with existing hospital HIS/RIS tools or build custom agents tailored to your institutional protocols.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Sovereign Data Infrastructure</h3>
+            <div class="xc_skillscard_cardbody">A tier-4 Chennai datacenter infrastructure layer supporting high-volume telemetry and real-time inference.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Healthcare Data Fabric Tabs -->
+    <section class="xc_datafabricsection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Healthcare Data Fabric</div>
+          <h2 class="xc_h2">Healthcare's Most Comprehensive Data Fabric</h2>
+          <p class="xc_subheadline">
+            A single layer that connects, transforms, and unifies clinical data from all sources so clinicians and AI agents can access information securely.
+          </p>
+        </div>
+
+        <div class="xc_tabs_datafabric">
+          <div class="tabs-menu-_datafabric">
+            <a class="tab_datafabric w--current" href="#fabric-sources">Data Sources</a>
+            <a class="tab_datafabric" href="#fabric-classes">Patient Classes</a>
+            <a class="tab_datafabric" href="#fabric-products">Data Products</a>
+          </div>
+
+          <div class="xc_tabs_datafabricwaapper">
+            <!-- Sources Pane -->
+            <div class="w-tab-pane w--tab-active">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-hospital" style="color: var(--accent-cyan);"></i> Epic EHR</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-laptop-medical" style="color: #16a34a;"></i> Cerner</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-database" style="color: #0284c7;"></i> Apollo HIS</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-server" style="color: #0d9488;"></i> Kauvery Med</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-id-card" style="color: #7c3aed;"></i> ABDM ABHA</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-vial" style="color: #d97706;"></i> Lab Systems</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-heart-pulse" style="color: #e11d48;"></i> Tele-ICU Feeds</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text"><i class="fa-solid fa-file-invoice-dollar" style="color: #16a34a;"></i> CMCHIS Claims</div></div>
+              </div>
+            </div>
+
+            <!-- Classes Pane -->
+            <div class="w-tab-pane">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Surgery</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Emergency / ED</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Inpatient / Hospital</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Outpatient</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Nephrology</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Pathology</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Radiology</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Oncology</div></div>
+              </div>
+            </div>
+
+            <!-- Products Pane -->
+            <div class="w-tab-pane">
+              <div class="xc_logos-grid">
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Provider Directory</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Patient 360</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Scheduling Engine</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Quality Measures</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Claims & Billing</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Provider Inbox</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Health Record</div></div>
+                <div class="xc_logo-wrapper"><div class="datafabric_text">Encounter Chart</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Health Network Infinite Marquee & Action CTA -->
+    <section class="xc_networksection xc_gobalpadding" style="padding-top: 2rem; padding-bottom: 3rem;">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper" style="margin-bottom: 1.5rem;">
+          <div class="xc_eyebrotext">Stackly Health Network</div>
+          <h2 class="xc_h2">Connected Hospital Ecosystem</h2>
+        </div>
+      </div>
+
+      <div class="xc_health_networklogomarqueewapper">
+        <div class="xc_health_networklogomarqueerow">
+          <div class="xc_health_networklogo"><i class="fa-solid fa-hospital" style="color: var(--accent-cyan);"></i> Apollo Specialty Hospitals, Chennai</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-square-h" style="color: #16a34a;"></i> Kauvery Hospital, Tiruchirappalli</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-heart-pulse" style="color: #0284c7;"></i> PSG Institute of Medical Sciences, Coimbatore</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-shield-halved" style="color: #d97706;"></i> Government Rajaji Hospital, Madurai</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-house-medical" style="color: #7c3aed;"></i> GEM Hospital & Research Centre, Chennai</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-circle-h" style="color: #e11d48;"></i> Meenakshi Mission Hospital, Madurai</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-hospital-user" style="color: #0d9488;"></i> Ganga Hospital, Coimbatore</div>
+          <!-- Marquee loop clone -->
+          <div class="xc_health_networklogo"><i class="fa-solid fa-hospital" style="color: var(--accent-cyan);"></i> Apollo Specialty Hospitals, Chennai</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-square-h" style="color: #16a34a;"></i> Kauvery Hospital, Tiruchirappalli</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-heart-pulse" style="color: #0284c7;"></i> PSG Institute of Medical Sciences, Coimbatore</div>
+          <div class="xc_health_networklogo"><i class="fa-solid fa-shield-halved" style="color: #d97706;"></i> Government Rajaji Hospital, Madurai</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized High-Tech Footer -->
+  <footer class="site_footer">
+    <div class="xc_maxwidth">
+      <div class="footer_grid">
+        
+        <div class="footer_brand">
+          <a href="index.html" class="xc_brand">
+            <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+            <span>Stackly</span>
+          </a>
+          <p>
+            The Agentic Digital Health Platform built to automate and scale healthcare data operations across 450+ hospitals in Tamil Nadu.
+          </p>
+          <div class="footer_social_wrapper">
+            <a href="404.html" class="social_media_btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="social_media_btn" title="X / Twitter">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social_media_btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="404.html" class="social_media_btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="404.html" class="social_media_btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Navigation</h4>
+          <div class="footer_links">
+            <a href="index.html">Home</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login Portal</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Tamil Nadu Hubs</h4>
+          <div class="footer_links">
+            <a href="404.html">Guindy Industrial Estate, Chennai</a>
+            <a href="404.html">TIDEL Park, Coimbatore</a>
+            <a href="404.html">K.K. Nagar, Madurai</a>
+            <a href="404.html">Thillai Nagar, Tiruchirappalli</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Compliance & Security</h4>
+          <div class="footer_links">
+            <a href="404.html">ABDM Milestone 1-3 Certified</a>
+            <a href="404.html">DISHA Health Data Privacy Act</a>
+            <a href="404.html">ISO 27001 Certified Cloud</a>
+            <a href="404.html">NABH 5th Edition Indicators</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer_bottom">
+        <div>
+          &copy; 2026 Stackly Health Platform Pvt. Ltd. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

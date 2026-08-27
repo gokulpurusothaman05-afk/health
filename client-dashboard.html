@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: #f8fafc; overflow: hidden;">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img" style="opacity: 0.12;">
+  </div>
+
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="sidebar-backdrop"></div>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- Left 100% Static Sidebar Menu -->
+    <aside class="dash-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="xc_brand">
+          <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+          <span>Stackly</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <nav class="sidebar-menu">
+        <div class="sidebar-label">Clinical Command</div>
+        <a href="#overview" class="sidebar-item active"><i class="fa-solid fa-chart-pie item-icon"></i> Executive Summary</a>
+        <a href="#icu-occupancy" class="sidebar-item"><i class="fa-solid fa-bed-pulse item-icon"></i> ICU Bed Allocation</a>
+        <a href="#disease-alerts" class="sidebar-item"><i class="fa-solid fa-triangle-exclamation item-icon"></i> Disease Alerts</a>
+        
+        <div class="sidebar-label">Financial & Audit</div>
+        <a href="#cmchis-claims" class="sidebar-item"><i class="fa-solid fa-indian-rupee-sign item-icon"></i> CMCHIS Claims</a>
+        <a href="#patient-queue" class="sidebar-item"><i class="fa-solid fa-stethoscope item-icon"></i> ER Patient Triage</a>
+        
+        <div class="sidebar-label">Operations</div>
+        <a href="#staff-roster" class="sidebar-item"><i class="fa-solid fa-user-nurse item-icon"></i> Staff & Roster</a>
+        <a href="#reports-export" class="sidebar-item"><i class="fa-solid fa-file-export item-icon"></i> NABH Reports</a>
+        <a href="#settings" class="sidebar-item"><i class="fa-solid fa-gear item-icon"></i> Settings</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="xc_button secondary" style="width: 100%; padding: 0.55rem 0.85rem; font-size: 0.8rem; justify-content: flex-start;">
+          <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Right Side Independently Scrollable Body -->
+    <div class="dash-right-wrapper">
+      
+      <!-- Top Dashboard Bar -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button class="dash-toggle-btn" aria-label="Toggle Navigation Menu"><i class="fa-solid fa-bars"></i></button>
+          <div class="hospital-select-badge">
+            <i class="fa-solid fa-hospital"></i> Apollo Hospital, Chennai
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <a href="404.html" style="color: var(--text-body); font-size: 1.05rem; position: relative; padding: 4px;" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span style="position: absolute; top: 2px; right: 2px; width: 7px; height: 7px; background: var(--accent-cyan); border-radius: 50%;"></span>
+          </a>
+
+          <!-- Dynamic Gmail User Profile Pill -->
+          <div class="user-profile-pill">
+            <div class="user-avatar-circle">RK</div>
+            <div class="user-info-text">
+              <span class="user-display-name">Dr. Rajesh Kumar</span>
+              <span class="user-display-email">rajesh.kumar@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Area -->
+      <main class="dash-main-content">
+        
+        <!-- Section 1: Executive Summary -->
+        <section id="overview" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-chart-pie" style="color: var(--accent-cyan);"></i> Clinical Command Overview</h2>
+            <span class="xc_eyebrotext" style="margin-bottom: 0;"><span class="pulse-dot"></span> LIVE SYNC</span>
+          </div>
+
+          <div class="stats-cards-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">ICU Bed Occupancy</span>
+                <div class="dash-stat-icon"><i class="fa-solid fa-bed-pulse"></i></div>
+              </div>
+              <div class="dash-stat-val">84%</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-arrow-up"></i> 14 Beds Available</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">CMCHIS Approved</span>
+                <div class="dash-stat-icon" style="color: #16a34a; background: #dcfce7;"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+              </div>
+              <div class="dash-stat-val">₹ 1.84 Cr</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-arrow-up"></i> +12% vs last mo</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Avg Triage Speed</span>
+                <div class="dash-stat-icon" style="color: #d97706; background: #fef3c7;"><i class="fa-solid fa-bolt"></i></div>
+              </div>
+              <div class="dash-stat-val">12 Mins</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-arrow-down"></i> -4 Mins faster</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Sepsis Watch</span>
+                <div class="dash-stat-icon" style="color: #e11d48; background: #ffe4e6;"><i class="fa-solid fa-heart-circle-bolt"></i></div>
+              </div>
+              <div class="dash-stat-val">3 Cases</div>
+              <div class="dash-stat-change down"><i class="fa-solid fa-triangle-exclamation"></i> Bed 4 Critical</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: ICU Bed Allocation -->
+        <section id="icu-occupancy" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-bed-pulse" style="color: var(--accent-cyan);"></i> Real-Time ICU Bed Allocation</h2>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-card);">
+            <div style="height: 280px; position: relative;">
+              <canvas id="client-icu-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Disease Outbreak Alerts -->
+        <section id="disease-alerts" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-triangle-exclamation" style="color: #d97706;"></i> Outbreak Warning Stream</h2>
+          </div>
+
+          <div class="dash-grid-responsive">
+            <div class="xc_skillscard" style="text-align: left; border-color: rgba(217, 119, 6, 0.3);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <h4 style="font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-heading);">Madurai Fever Surge</h4>
+                <span style="background: #fef3c7; color: #d97706; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">HIGH RISK</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 1rem;">
+                Epidemiology models project incoming fever surge over next 5 days. Prepare additional pediatric ICU beds.
+              </p>
+              <a href="404.html" class="xc_button secondary navbar"><i class="fa-solid fa-shield"></i> Activate Protocol</a>
+            </div>
+
+            <div class="xc_skillscard" style="text-align: left; border-color: rgba(22, 163, 74, 0.3);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <h4 style="font-family: var(--font-heading); font-size: 1.05rem; color: var(--text-heading);">Chennai Dengue Tracking</h4>
+                <span style="background: #dcfce7; color: #16a34a; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">OPTIMAL</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 1rem;">
+                Vector index is stable across Adyar and Guindy zones. Platelet inventory levels currently at 98% capacity.
+              </p>
+              <a href="404.html" class="xc_button secondary navbar"><i class="fa-solid fa-vial"></i> Blood Bank Stocks</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: CMCHIS Insurance Claims -->
+        <section id="cmchis-claims" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-indian-rupee-sign" style="color: var(--accent-cyan);"></i> CMCHIS Revenue & Claims Settlement</h2>
+          </div>
+
+          <div class="dash-grid-2col">
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-card); min-width: 0;">
+              <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-heading); margin-bottom: 1rem;">Approved Claims (₹ Lakhs)</h4>
+              <div style="height: 220px; position: relative;">
+                <canvas id="client-revenue-chart"></canvas>
+              </div>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-card); min-width: 0;">
+              <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-heading); margin-bottom: 1rem;">Recent Claims Telemetry</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <div style="display: flex; justify-content: space-between; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px; font-size: 0.825rem;">
+                  <span style="font-weight: 600;">#TN-84920 (Angioplasty)</span>
+                  <span style="color: #16a34a; font-weight: 700;">₹ 1.65 L (Approved)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px; font-size: 0.825rem;">
+                  <span style="font-weight: 600;">#TN-84924 (Dialysis)</span>
+                  <span style="color: var(--accent-cyan); font-weight: 700;">₹ 85,000 (Processing)</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px; font-size: 0.825rem;">
+                  <span style="font-weight: 600;">#TN-84929 (ICU Stay)</span>
+                  <span style="color: #d97706; font-weight: 700;">₹ 2.10 L (Verified)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: ER Patient Triage Queue -->
+        <section id="patient-queue" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-stethoscope" style="color: var(--accent-cyan);"></i> Live Emergency Patient Queue</h2>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.725rem;">
+                  <th style="padding: 0.75rem 0.85rem;">Patient & ABHA ID</th>
+                  <th style="padding: 0.75rem 0.85rem;">Age/Sex</th>
+                  <th style="padding: 0.75rem 0.85rem;">Primary Symptom</th>
+                  <th style="padding: 0.75rem 0.85rem;">Risk Score</th>
+                  <th style="padding: 0.75rem 0.85rem;">Assigned Ward</th>
+                  <th style="padding: 0.75rem 0.85rem;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">M. Shanmugam (ABHA: 92-8401)</td>
+                  <td style="padding: 0.75rem 0.85rem;">58 M</td>
+                  <td style="padding: 0.75rem 0.85rem;">Chest Pain & Dyspnea</td>
+                  <td style="padding: 0.75rem 0.85rem; color: #e11d48; font-weight: 700;">Risk 94/100</td>
+                  <td style="padding: 0.75rem 0.85rem;">Cardiac ICU 02</td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button primary navbar">Triage</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">K. Lakshmi (ABHA: 88-1029)</td>
+                  <td style="padding: 0.75rem 0.85rem;">34 F</td>
+                  <td style="padding: 0.75rem 0.85rem;">High Grade Fever</td>
+                  <td style="padding: 0.75rem 0.85rem; color: #d97706; font-weight: 700;">Risk 68/100</td>
+                  <td style="padding: 0.75rem 0.85rem;">Fever Ward 14</td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button secondary navbar">Vitals</a></td>
+                </tr>
+                <tr style="color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">R. Karthik (ABHA: 74-9021)</td>
+                  <td style="padding: 0.75rem 0.85rem;">42 M</td>
+                  <td style="padding: 0.75rem 0.85rem;">Abdominal Trauma</td>
+                  <td style="padding: 0.75rem 0.85rem; color: #16a34a; font-weight: 700;">Risk 32/100</td>
+                  <td style="padding: 0.75rem 0.85rem;">Observation B</td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button secondary navbar">Vitals</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 6: Staff Roster -->
+        <section id="staff-roster" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-user-nurse" style="color: var(--accent-cyan);"></i> Doctor & Nurse Roster</h2>
+          </div>
+
+          <div class="dash-grid-responsive">
+            <div class="xc_skillscard" style="text-align: left; padding: 1.15rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.4rem;">
+                <div class="user-avatar-circle">RK</div>
+                <div>
+                  <h4 style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;" class="user-display-name">Dr. Rajesh Kumar</h4>
+                  <span style="font-size: 0.725rem; color: var(--accent-cyan); font-weight: 700;">Senior Intensivist</span>
+                </div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">ICU Shift: 08:00 AM - 04:00 PM</p>
+            </div>
+
+            <div class="xc_skillscard" style="text-align: left; padding: 1.15rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.4rem;">
+                <div class="user-avatar-circle" style="background: linear-gradient(135deg, #16a34a, #0d9488);">AP</div>
+                <div>
+                  <h4 style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Dr. Anitha Priya</h4>
+                  <span style="font-size: 0.725rem; color: #16a34a; font-weight: 700;">Cardiologist</span>
+                </div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">Cardiac Wards | 8 Patients</p>
+            </div>
+
+            <div class="xc_skillscard" style="text-align: left; padding: 1.15rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.4rem;">
+                <div class="user-avatar-circle" style="background: linear-gradient(135deg, #d97706, #b45309);">SM</div>
+                <div>
+                  <h4 style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Nurse S. Malar</h4>
+                  <span style="font-size: 0.725rem; color: #d97706; font-weight: 700;">Head Nurse</span>
+                </div>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted);">ER Shift: 08:00 AM - 08:00 PM</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 7: NABH Reports Export -->
+        <section id="reports-export" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-file-export" style="color: var(--accent-cyan);"></i> NABH & Clinical Reports Export</h2>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-card);">
+            <p style="color: var(--text-body); margin-bottom: 1.25rem; font-size: 0.88rem;">
+              Generate automated compliance audit packages formatted according to NABH Quality Indicator standards.
+            </p>
+            <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+              <button class="xc_button primary btn-export-pdf"><i class="fa-solid fa-file-pdf"></i> Export NABH Audit (PDF)</button>
+              <button class="xc_button secondary btn-export-pdf"><i class="fa-solid fa-file-excel"></i> Export Ledger (XLSX)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 8: Account Settings -->
+        <section id="settings" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-gear" style="color: var(--accent-cyan);"></i> Hospital Node Settings</h2>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; max-width: 650px; box-shadow: var(--shadow-card);">
+            <div style="margin-bottom: 1.15rem;">
+              <label for="setting-user-name" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Logged In Doctor</label>
+              <input type="text" id="setting-user-name" name="userName" class="user-display-name" style="width: 100%; padding: 0.75rem 1rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading); font-weight: 600;" value="Dr. Rajesh Kumar" readonly>
+            </div>
+            <div style="margin-bottom: 1.15rem;">
+              <label for="setting-user-email" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Synchronized Email Address</label>
+              <input type="email" id="setting-user-email" name="userEmail" class="user-display-email" style="width: 100%; padding: 0.75rem 1rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading); font-weight: 600;" value="rajesh.kumar@gmail.com" readonly>
+            </div>
+            <div>
+              <label for="setting-node-id" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Hospital Node Designation</label>
+              <input type="text" id="setting-node-id" name="nodeDesignation" style="width: 100%; padding: 0.75rem 1rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading); font-weight: 600;" value="Apollo Specialty Hospital, Chennai" readonly>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

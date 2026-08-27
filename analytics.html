@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="xc_body">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img">
+  </div>
+
+  <!-- Header & Navbar (4 Nav Items, No Dropdowns, Login Button) -->
+  <header class="xc_header">
+    <div class="xc_maxwidth">
+      <div class="xc_navbar_wapper">
+        <a href="index.html" class="xc_brand">
+          <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+          <span>Stackly</span>
+        </a>
+
+        <!-- Exactly 4 Navlist Items -->
+        <nav class="xc_navlinkswapper">
+          <a href="index.html" class="xc_navlinks">Home</a>
+          <a href="solutions.html" class="xc_navlinks">Solutions</a>
+          <a href="analytics.html" class="xc_navlinks active">Analytics</a>
+          <a href="about.html" class="xc_navlinks">About Us</a>
+        </nav>
+
+        <!-- Right Login Button & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="login.html" class="xc_button primary navbar">Login</a>
+          <button class="mobile_toggle_btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section 1: Analytics Hero -->
+    <section class="xc_herosection xc_gobalpadding">
+      <div class="xc_herosectionblur"></div>
+      <div class="xc_maxwidth">
+        <div class="xc_herowapper">
+          <div class="xc_headlinewapper">
+            <div class="xc_eyebrotext">Live Telemetry Grid</div>
+            <h1 class="xc_h1">Enterprise Clinical <br>Analytics Telemetry</h1>
+            <p class="xc_subheadline">
+              Real-time epidemiological monitoring, hospital bed allocation, and claim settlement insights across connected district networks.
+            </p>
+          </div>
+          <div class="w-layout-vflex xc_ctawapeper">
+            
+            <a href="login.html" class="xc_button secondary">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: District Fever Surveillance Grid -->
+    <section class="xc_usecasesection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Vector & Epidemic Surveillance</div>
+          <h2 class="xc_h2">District Fever & Dengue Radar</h2>
+          <p class="xc_subheadline">Predictive machine learning models tracking early fever clusters and hospital surge demands.</p>
+        </div>
+
+        <div class="xc_usercasecards">
+          <div class="xc_usecases1">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 class="xc_h3" style="margin-bottom: 0;">Madurai Hub</h3>
+              <span style="background: rgba(217, 119, 6, 0.15); color: #d97706; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">SURGE ALERT</span>
+            </div>
+            <div class="xc_usercase_cardbody">
+              Fever admissions projected to increase +18% over the next 48 hours. Primary vector: Dengue Serotype 2. Automated alerts sent to Government Rajaji Hospital.
+            </div>
+          </div>
+
+          <div class="xc_usecases2">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 class="xc_h3" style="margin-bottom: 0;">Chennai Metro</h3>
+              <span style="background: rgba(22, 163, 74, 0.15); color: #16a34a; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">STABLE</span>
+            </div>
+            <div class="xc_usercase_cardbody">
+              Normal seasonal trajectory across Apollo, Rajiv Gandhi GH, and Fortis Malar centers with 84% ICU bed occupancy.
+            </div>
+          </div>
+
+          <div class="xc_usecases3">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h3 class="xc_h3" style="margin-bottom: 0;">Coimbatore Region</h3>
+              <span style="background: rgba(2, 132, 199, 0.15); color: var(--accent-cyan); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">MONITORED</span>
+            </div>
+            <div class="xc_usercase_cardbody">
+              Pediatric ICU beds and platelet reserve operating at 76.8% optimal capacity across private and government hospitals.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Hospital Capacity & Triage Table -->
+    <section class="xc_gobalpadding" style="background: rgba(255, 255, 255, 0.6);">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Bed Capacity</div>
+          <h2 class="xc_h2">Tamil Nadu Emergency & ICU Matrix</h2>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; overflow-x: auto; box-shadow: var(--shadow-card);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.75rem;">
+                <th style="padding: 1rem;">HOSPITAL NODE</th>
+                <th style="padding: 1rem;">LOCATION</th>
+                <th style="padding: 1rem;">TOTAL BEDS</th>
+                <th style="padding: 1rem;">AVAILABLE ICU</th>
+                <th style="padding: 1rem;">AVG TRIAGE</th>
+                <th style="padding: 1rem;">STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                <td style="padding: 1rem; font-weight: 700;">Apollo Specialty Hospitals</td>
+                <td style="padding: 1rem;">Chennai Metro</td>
+                <td style="padding: 1rem;">650</td>
+                <td style="padding: 1rem; color: var(--accent-cyan); font-weight: 700;">8 Beds</td>
+                <td style="padding: 1rem;">12 Mins</td>
+                <td style="padding: 1rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Optimal</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                <td style="padding: 1rem; font-weight: 700;">Kauvery Hospital</td>
+                <td style="padding: 1rem;">Tiruchirappalli</td>
+                <td style="padding: 1rem;">380</td>
+                <td style="padding: 1rem; color: var(--accent-cyan); font-weight: 700;">14 Beds</td>
+                <td style="padding: 1rem;">9 Mins</td>
+                <td style="padding: 1rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Optimal</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                <td style="padding: 1rem; font-weight: 700;">PSG Institute of Medical Sciences</td>
+                <td style="padding: 1rem;">Coimbatore</td>
+                <td style="padding: 1rem;">800</td>
+                <td style="padding: 1rem; color: var(--accent-cyan); font-weight: 700;">22 Beds</td>
+                <td style="padding: 1rem;">11 Mins</td>
+                <td style="padding: 1rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Optimal</span></td>
+              </tr>
+              <tr style="color: var(--text-heading);">
+                <td style="padding: 1rem; font-weight: 700;">Government Rajaji Hospital</td>
+                <td style="padding: 1rem;">Madurai</td>
+                <td style="padding: 1rem;">1,200</td>
+                <td style="padding: 1rem; color: #e11d48; font-weight: 700;">3 Beds</td>
+                <td style="padding: 1rem;">24 Mins</td>
+                <td style="padding: 1rem;"><span style="color: #e11d48; font-weight: 700;">Critical Surge</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Readmission Reduction Outcomes -->
+    <section class="xc_skillssection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Clinical Outcomes</div>
+          <h2 class="xc_h2">Measurable Hospital Impact</h2>
+        </div>
+
+        <div class="xc_skillscardswapper">
+          <div class="xc_skillscard">
+            <div style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 0.25rem;">-34.2%</div>
+            <h3 class="xc_h3">Readmission Reduction</h3>
+            <div class="xc_skillscard_cardbody">Automated post-discharge patient tracking over ABDM ABHA mobile alerts.</div>
+          </div>
+
+          <div class="xc_skillscard">
+            <div style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; color: #16a34a; margin-bottom: 0.25rem;">99.4%</div>
+            <h3 class="xc_h3">Sepsis Precision</h3>
+            <div class="xc_skillscard_cardbody">Validated on 120,000+ ICU admissions across Chennai and Coimbatore.</div>
+          </div>
+
+          <div class="xc_skillscard">
+            <div style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; color: #d97706; margin-bottom: 0.25rem;">₹42+ Cr</div>
+            <h3 class="xc_h3">CMCHIS Recovered</h3>
+            <div class="xc_skillscard_cardbody">Automated ICD-10 diagnostic coding eliminating insurer rejections.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Pharmacy & Supply Chain Telemetry -->
+    <section class="xc_gobalpadding" style="background: rgba(255, 255, 255, 0.6);">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Supply Chain</div>
+          <h2 class="xc_h2">State Pharmacy & Antivenom Stocks</h2>
+        </div>
+
+        <div class="xc_logos-grid">
+          <div class="xc_logo-wrapper">
+            <i class="fa-solid fa-syringe" style="font-size: 2rem; color: var(--accent-cyan);"></i>
+            <h4 style="font-family: var(--font-heading); font-weight: 700; color: var(--text-heading);">Snake Antivenom</h4>
+            <div style="font-weight: 800; color: #16a34a;">1,420 Vials</div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Madurai & Salem</span>
+          </div>
+
+          <div class="xc_logo-wrapper">
+            <i class="fa-solid fa-vial-circle-check" style="font-size: 2rem; color: #16a34a;"></i>
+            <h4 style="font-family: var(--font-heading); font-weight: 700; color: var(--text-heading);">Paracetamol IV</h4>
+            <div style="font-weight: 800; color: #16a34a;">94% In Stock</div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Chennai & Kovai</span>
+          </div>
+
+          <div class="xc_logo-wrapper">
+            <i class="fa-solid fa-prescription-bottle-medical" style="font-size: 2rem; color: #d97706;"></i>
+            <h4 style="font-family: var(--font-heading); font-weight: 700; color: var(--text-heading);">Broad Antibiotics</h4>
+            <div style="font-weight: 800; color: #d97706;">Reorder Alert</div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Trichy Hub</span>
+          </div>
+
+          <div class="xc_logo-wrapper">
+            <i class="fa-solid fa-box-tissue" style="font-size: 2rem; color: #7c3aed;"></i>
+            <h4 style="font-family: var(--font-heading); font-weight: 700; color: var(--text-heading);">PPE & Masks</h4>
+            <div style="font-weight: 800; color: #16a34a;">100% Stocked</div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">State Logistics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Physician Productivity Benchmarks -->
+    <section class="xc_platformsection xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">Staff Productivity</div>
+          <h2 class="xc_h2">Doctor & Nurse Burnout Mitigation</h2>
+        </div>
+
+        <div class="xc_platformcards">
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Shift Burnout Index</h3>
+            <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent-cyan); margin: 0.5rem 0;">12.4% (Low)</div>
+            <div class="xc_skillscard_cardbody">Automated shift rotation prevents nursing fatigue in intensive care units.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Direct Consult Time</h3>
+            <div style="font-size: 1.8rem; font-weight: 800; color: #16a34a; margin: 0.5rem 0;">18.5 Mins</div>
+            <div class="xc_skillscard_cardbody">Increased direct bedside patient interaction by eliminating manual paperwork.</div>
+          </div>
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Doctor Satisfaction</h3>
+            <div style="font-size: 1.8rem; font-weight: 800; color: #d97706; margin: 0.5rem 0;">96.8%</div>
+            <div class="xc_skillscard_cardbody">Rated by 1,400+ doctors across partner hospital networks.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: District Telemetry Heatmap Indicators -->
+    <section class="xc_gobalpadding" style="background: rgba(255, 255, 255, 0.6);">
+      <div class="xc_maxwidth">
+        <div class="xc_headlinewapper">
+          <div class="xc_eyebrotext">District KPI Matrix</div>
+          <h2 class="xc_h2">Tamil Nadu Health Telemetry Indices</h2>
+        </div>
+
+        <div class="xc_skillscardswapper">
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Active Tele-ICU Streams</h3>
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 0.35rem;">1,842 Beds</div>
+            <div class="xc_skillscard_cardbody">Live stream with 14ms average sync latency across Chennai & Madurai nodes.</div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">Average ER Turnaround</h3>
+            <div style="font-size: 2.2rem; font-weight: 800; color: #16a34a; margin-bottom: 0.35rem;">11.8 Mins</div>
+            <div class="xc_skillscard_cardbody">Reduced from 28.5 minutes with autonomous algorithmic triage intake.</div>
+          </div>
+
+          <div class="xc_skillscard">
+            <h3 class="xc_h3">ABDM Digital Gateways</h3>
+            <div style="font-size: 2.2rem; font-weight: 800; color: #7c3aed; margin-bottom: 0.35rem;">100% In Compliance</div>
+            <div class="xc_skillscard_cardbody">All 38 district general hospitals linked with SHA-512 health encryption.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: CTA Banner -->
+    <section class="xc_gobalpadding">
+      <div class="xc_maxwidth">
+        <div class="xc_glowing-card-lc">
+          <div class="xc_banner">
+            <h2 class="xc_h2">Unlock Live Telemetry for Your Hospital</h2>
+            <p class="xc_subheadline" style="max-width: 650px; margin: 0 auto 2rem;">
+              Connect your clinical feeds to the Stackly Tamil Nadu analytics dashboard in minutes.
+            </p>
+            <a href="404.html" class="xc_button primary">Access Portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Standardized High-Tech Footer -->
+  <footer class="site_footer">
+    <div class="xc_maxwidth">
+      <div class="footer_grid">
+        <div class="footer_brand">
+          <a href="index.html" class="xc_brand">
+            <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+            <span>Stackly</span>
+          </a>
+          <p>The Agentic Digital Health Platform built to automate and scale healthcare data operations across 450+ hospitals in Tamil Nadu.</p>
+          <div class="footer_social_wrapper">
+            <a href="404.html" class="social_media_btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="social_media_btn" title="X / Twitter">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social_media_btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="404.html" class="social_media_btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="404.html" class="social_media_btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Navigation</h4>
+          <div class="footer_links">
+            <a href="index.html">Home</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login Portal</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Tamil Nadu Hubs</h4>
+          <div class="footer_links">
+            <a href="404.html">Guindy Industrial Estate, Chennai</a>
+            <a href="404.html">TIDEL Park, Coimbatore</a>
+            <a href="404.html">K.K. Nagar, Madurai</a>
+            <a href="404.html">Thillai Nagar, Tiruchirappalli</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer_title">Compliance & Security</h4>
+          <div class="footer_links">
+            <a href="404.html">ABDM Milestone 1-3 Certified</a>
+            <a href="404.html">DISHA Health Data Privacy Act</a>
+            <a href="404.html">ISO 27001 Certified Cloud</a>
+            <a href="404.html">NABH 5th Edition Indicators</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <div>&copy; 2026 Stackly Health Platform Pvt. Ltd. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

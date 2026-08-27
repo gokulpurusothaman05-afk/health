@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="background: #f8fafc; overflow: hidden;">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img" style="opacity: 0.12;">
+  </div>
+
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="sidebar-backdrop"></div>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- Left 100% Static Sidebar Menu -->
+    <aside class="dash-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="xc_brand">
+          <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+          <span>Stackly</span>
+        </a>
+        <button class="sidebar-close-btn" aria-label="Close Sidebar"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <nav class="sidebar-menu">
+        <div class="sidebar-label">State Control Grid</div>
+        <a href="#admin-overview" class="sidebar-item active"><i class="fa-solid fa-globe item-icon"></i> Overview</a>
+        <a href="#hospital-nodes" class="sidebar-item"><i class="fa-solid fa-building-ngo item-icon"></i> Node Registry</a>
+        <a href="#ai-models" class="sidebar-item"><i class="fa-solid fa-brain item-icon"></i> Model Telemetry</a>
+        
+        <div class="sidebar-label">Interoperability</div>
+        <a href="#abdm-interop" class="sidebar-item"><i class="fa-solid fa-link item-icon"></i> ABDM / ABHA</a>
+        <a href="#user-access" class="sidebar-item"><i class="fa-solid fa-users-gear item-icon"></i> User Controls</a>
+        
+        <div class="sidebar-label">System Health</div>
+        <a href="#system-logs" class="sidebar-item"><i class="fa-solid fa-list-check item-icon"></i> Audit Logs</a>
+        <a href="#data-ingestion" class="sidebar-item"><i class="fa-solid fa-database item-icon"></i> Sovereign Pipeline</a>
+        <a href="#admin-settings" class="sidebar-item"><i class="fa-solid fa-sliders item-icon"></i> Configuration</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="xc_button secondary" style="width: 100%; padding: 0.55rem 0.85rem; font-size: 0.8rem; justify-content: flex-start;">
+          <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Right Side Independently Scrollable Body -->
+    <div class="dash-right-wrapper">
+      
+      <!-- Topbar -->
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button class="dash-toggle-btn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+          <div class="hospital-select-badge" style="background: #fef3c7; border-color: #fde68a; color: #d97706;">
+            <i class="fa-solid fa-shield-halved"></i> State Health Command Desk
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <div class="user-profile-pill">
+            <div class="user-avatar-circle" style="background: linear-gradient(135deg, #d97706, #b45309);">SA</div>
+            <div class="user-info-text">
+              <span class="user-display-name">TN State Admin</span>
+              <span class="user-display-email">admin.tn@stackly.health</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="dash-main-content">
+        
+        <!-- Section 1: Overview -->
+        <section id="admin-overview" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-globe" style="color: var(--accent-cyan);"></i> State Health Overview</h2>
+            <span class="xc_eyebrotext" style="margin-bottom: 0;">38 DISTRICTS CONNECTED</span>
+          </div>
+
+          <div class="stats-cards-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Hospital Nodes</span>
+                <div class="dash-stat-icon"><i class="fa-solid fa-hospital"></i></div>
+              </div>
+              <div class="dash-stat-val">452 Nodes</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-arrow-up"></i> +12 this month</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Daily Ingestion</span>
+                <div class="dash-stat-icon" style="color: var(--accent-cyan); background: var(--accent-cyan-light);"><i class="fa-solid fa-database"></i></div>
+              </div>
+              <div class="dash-stat-val">1.4 TB / Day</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-bolt"></i> Chennai Datacenter</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">ABHA Records</span>
+                <div class="dash-stat-icon" style="color: #16a34a; background: #dcfce7;"><i class="fa-solid fa-id-card"></i></div>
+              </div>
+              <div class="dash-stat-val">12.4 M</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-check"></i> Sealed</div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Inference Speed</span>
+                <div class="dash-stat-icon" style="color: #7c3aed; background: #f3e8ff;"><i class="fa-solid fa-brain"></i></div>
+              </div>
+              <div class="dash-stat-val">14 ms</div>
+              <div class="dash-stat-change up"><i class="fa-solid fa-rocket"></i> Ultra Low</div>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-card);">
+            <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-heading); margin-bottom: 1rem;">Patient Flow vs Outbreak Spike Index</h4>
+            <div style="height: 260px; position: relative;">
+              <canvas id="admin-state-chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Hospital Node Registry -->
+        <section id="hospital-nodes" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-building-ngo" style="color: var(--accent-cyan);"></i> Hospital Node Registry</h2>
+            <a href="404.html" class="xc_button primary navbar"><i class="fa-solid fa-plus"></i> Onboard Node</a>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.725rem;">
+                  <th style="padding: 0.75rem 0.85rem;">Node ID</th>
+                  <th style="padding: 0.75rem 0.85rem;">Institution Name</th>
+                  <th style="padding: 0.75rem 0.85rem;">District Hub</th>
+                  <th style="padding: 0.75rem 0.85rem;">Beds</th>
+                  <th style="padding: 0.75rem 0.85rem;">Sync Status</th>
+                  <th style="padding: 0.75rem 0.85rem;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700;">TN-001</td>
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">Apollo Specialty Hospital</td>
+                  <td style="padding: 0.75rem 0.85rem;">Chennai</td>
+                  <td style="padding: 0.75rem 0.85rem;">650</td>
+                  <td style="padding: 0.75rem 0.85rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Active</span></td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button secondary navbar">Manage</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700;">TN-014</td>
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">Kauvery Hospital Network</td>
+                  <td style="padding: 0.75rem 0.85rem;">Trichy</td>
+                  <td style="padding: 0.75rem 0.85rem;">380</td>
+                  <td style="padding: 0.75rem 0.85rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Active</span></td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button secondary navbar">Manage</a></td>
+                </tr>
+                <tr style="color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 700;">TN-028</td>
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">PSG IMS & Hospitals</td>
+                  <td style="padding: 0.75rem 0.85rem;">Coimbatore</td>
+                  <td style="padding: 0.75rem 0.85rem;">800</td>
+                  <td style="padding: 0.75rem 0.85rem;"><span style="color: #16a34a; font-weight: 700;"><span class="pulse-dot"></span> Active</span></td>
+                  <td style="padding: 0.75rem 0.85rem;"><a href="404.html" class="xc_button secondary navbar">Manage</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 3: AI Model Telemetry -->
+        <section id="ai-models" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-brain" style="color: var(--accent-cyan);"></i> Neural AI Model Telemetry</h2>
+          </div>
+
+          <div class="dash-grid-responsive">
+            <div class="xc_skillscard" style="text-align: left; padding: 1.25rem;">
+              <h4 style="font-family: var(--font-heading); color: var(--text-heading); margin-bottom: 0.35rem;">Sepsis Predictor v4.2</h4>
+              <div style="font-size: 1.7rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 0.35rem;">99.4% Precision</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Model Drift: 0.02%</p>
+            </div>
+
+            <div class="xc_skillscard" style="text-align: left; padding: 1.25rem;">
+              <h4 style="font-family: var(--font-heading); color: var(--text-heading); margin-bottom: 0.35rem;">CMCHIS Auto-Coder</h4>
+              <div style="font-size: 1.7rem; font-weight: 800; color: #16a34a; margin-bottom: 0.35rem;">98.8% Accuracy</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">ICD-10 Code Matching.</p>
+            </div>
+
+            <div class="xc_skillscard" style="text-align: left; padding: 1.25rem;">
+              <h4 style="font-family: var(--font-heading); color: var(--text-heading); margin-bottom: 0.35rem;">Epidemic Radar</h4>
+              <div style="font-size: 1.7rem; font-weight: 800; color: #d97706; margin-bottom: 0.35rem;">10-Day Window</div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">38 Districts Monitored.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: ABDM Gateway Breakdown -->
+        <section id="abdm-interop" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-link" style="color: var(--accent-cyan);"></i> ABDM / ABHA Gateway Breakdown</h2>
+          </div>
+
+          <div class="dash-grid-2col">
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-card); min-width: 0;">
+              <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-heading); margin-bottom: 1rem;">Data Ingestion Categories</h4>
+              <div style="height: 220px; position: relative;">
+                <canvas id="admin-abdm-chart"></canvas>
+              </div>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-card); min-width: 0;">
+              <h4 style="font-family: var(--font-heading); font-size: 0.95rem; color: var(--text-heading); margin-bottom: 1rem;">National Gateways</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.825rem; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px;">
+                  <span>ABDM Milestone 1 (Health ID)</span>
+                  <span style="color: #16a34a; font-weight: 700;">PASSED ✓</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.825rem; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px;">
+                  <span>ABDM Milestone 2 (Registry)</span>
+                  <span style="color: #16a34a; font-weight: 700;">PASSED ✓</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.825rem; padding: 0.65rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 6px;">
+                  <span>ABDM Milestone 3 (Exchange)</span>
+                  <span style="color: #16a34a; font-weight: 700;">PASSED ✓</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Access Control -->
+        <section id="user-access" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-users-gear" style="color: var(--accent-cyan);"></i> Access & User Control</h2>
+          </div>
+
+          <div class="dash-table-wrapper">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-muted); font-family: var(--font-heading); text-transform: uppercase; font-size: 0.725rem;">
+                  <th style="padding: 0.75rem 0.85rem;">User Identity</th>
+                  <th style="padding: 0.75rem 0.85rem;">Email</th>
+                  <th style="padding: 0.75rem 0.85rem;">Assigned Role</th>
+                  <th style="padding: 0.75rem 0.85rem;">Node</th>
+                  <th style="padding: 0.75rem 0.85rem;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">Dr. Rajesh Kumar</td>
+                  <td style="padding: 0.75rem 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);">rajesh.kumar@gmail.com</td>
+                  <td style="padding: 0.75rem 0.85rem;">Hospital Doctor</td>
+                  <td style="padding: 0.75rem 0.85rem;">Apollo Specialty</td>
+                  <td style="padding: 0.75rem 0.85rem;"><span style="color: #16a34a; font-weight: 700;">Active</span></td>
+                </tr>
+                <tr style="color: var(--text-heading);">
+                  <td style="padding: 0.75rem 0.85rem; font-weight: 700;">TN State Admin</td>
+                  <td style="padding: 0.75rem 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);">admin.tn@stackly.health</td>
+                  <td style="padding: 0.75rem 0.85rem;">System Admin</td>
+                  <td style="padding: 0.75rem 0.85rem;">State Command Hub</td>
+                  <td style="padding: 0.75rem 0.85rem;"><span style="color: #16a34a; font-weight: 700;">Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 6: Audit Logs -->
+        <section id="system-logs" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> Live System Audit Logs</h2>
+          </div>
+
+          <div style="background: #0f172a; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.7; box-shadow: var(--shadow-card); overflow-x: auto;">
+            <div style="color: #38bdf8;">[2026-08-27T14:35:01+05:30] INFRA: Sovereign cluster node guindy-tn-01 connected (100 Gbps).</div>
+            <div style="color: #4ade80;">[2026-08-27T14:36:12+05:30] AUTH: User rajesh.kumar@gmail.com authenticated.</div>
+            <div style="color: #facc15;">[2026-08-27T14:37:44+05:30] AUDIT: CMCHIS claim #TN-84920 verified & encrypted (SHA-512).</div>
+            <div style="color: #38bdf8;">[2026-08-27T14:38:00+05:30] MODEL: Sepsis inference completed for 452 hospital nodes. Zero errors.</div>
+          </div>
+        </section>
+
+        <!-- Section 7: Ingestion Speed -->
+        <section id="data-ingestion" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> Sovereign Pipeline Telemetry</h2>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center; box-shadow: var(--shadow-card);">
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);">1.42 GB / sec</div>
+            <p style="color: var(--text-body); margin-top: 0.35rem; font-size: 0.88rem;">Real-time ingestion speed across all connected district nodes.</p>
+          </div>
+        </section>
+
+        <!-- Section 8: Admin Configuration -->
+        <section id="admin-settings" class="dash-section-block">
+          <div class="dash-section-header">
+            <h2 class="dash-section-title"><i class="fa-solid fa-sliders" style="color: var(--accent-cyan);"></i> State System Settings</h2>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; max-width: 650px; box-shadow: var(--shadow-card);">
+            <div style="margin-bottom: 1.15rem;">
+              <label for="admin-gateway-key" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Stackly API Gateway Encryption Key</label>
+              <input type="text" id="admin-gateway-key" name="gatewayKey" style="width: 100%; padding: 0.75rem 1rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading); font-family: var(--font-mono);" value="stk_live_tn_98492019481029481" readonly>
+            </div>
+            <div>
+              <label for="admin-dc-location" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Primary Data Center Location</label>
+              <input type="text" id="admin-dc-location" name="dcLocation" style="width: 100%; padding: 0.75rem 1rem; background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading); font-weight: 600;" value="Guindy Sovereign Tech Park Data Center (Chennai)" readonly>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

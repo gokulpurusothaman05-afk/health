@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="xc_body">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img">
+  </div>
+
+  <main>
+    <section class="xc_herosection xc_gobalpadding" style="padding: 4rem 0 5rem;">
+      <div class="xc_herosectionblur"></div>
+      <div class="xc_maxwidth">
+        <div class="auth-grid-layout">
+          
+          <!-- Left Info -->
+          <div style="text-align: left;">
+            <a href="index.html" class="xc_brand" style="margin-bottom: 2rem;">
+              <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+              <span>Stackly</span>
+            </a>
+            <div class="xc_eyebrotext">Healthcare Registration</div>
+            <h1 class="xc_h1" style="font-size: 2.8rem;">Join the Intelligent <br>Healthcare Grid</h1>
+            <p class="xc_subheadline" style="margin-bottom: 2rem;">
+              Create your clinical credentials to access real-time hospital occupancy telemetry, CMCHIS revenue tools, and automated disease alerts.
+            </p>
+          </div>
+
+          <!-- Right Sign Up Box -->
+          <div class="auth-card-box">
+            
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <h3 class="xc_h3" style="font-size: 1.25rem; margin-bottom: 0.25rem;">Create Your Account</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Enter your details to register as a verified healthcare user</p>
+            </div>
+
+            <form id="main-signup-form">
+              <div style="margin-bottom: 1rem;">
+                <label for="signup-username" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Username / Name</label>
+                <input type="text" id="signup-username" name="username" style="width: 100%; padding: 0.8rem 1.1rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="username" required>
+              </div>
+
+              <div style="margin-bottom: 1rem;">
+                <label for="signup-email" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Email Address</label>
+                <input type="email" id="signup-email" name="email" style="width: 100%; padding: 0.8rem 1.1rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="example@gmail.com" required>
+              </div>
+
+              <div style="margin-bottom: 1rem;">
+                <label for="signup-password" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Password</label>
+                <input type="password" id="signup-password" name="password" style="width: 100%; padding: 0.8rem 1.1rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="••••••••" required>
+              </div>
+
+              <div style="margin-bottom: 1.15rem;">
+                <label for="signup-confirm-password" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-heading); margin-bottom: 0.35rem;">Confirm Password</label>
+                <input type="password" id="signup-confirm-password" name="confirmPassword" style="width: 100%; padding: 0.8rem 1.1rem; background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: 8px; color: var(--text-heading);" placeholder="••••••••" required>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.35rem; font-size: 0.825rem;">
+                <input type="checkbox" id="signup-terms" checked required style="accent-color: var(--accent-cyan);">
+                <label for="signup-terms" style="cursor: pointer; color: var(--text-body);">I agree to the <a href="404.html" style="color: var(--accent-cyan); font-weight: 600;">Terms & Privacy Policy</a></label>
+              </div>
+
+              <button type="submit" class="xc_button primary" style="width: 100%;">Create Account</button>
+              <a href="index.html" class="xc_button secondary" style="width: 100%; margin-top: 0.75rem; justify-content: center; text-align: center;"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+              <div style="margin-top: 1.25rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+                Already have an account? <a href="login.html" style="color: var(--accent-cyan); font-weight: 700; text-decoration: none;">Sign In</a>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

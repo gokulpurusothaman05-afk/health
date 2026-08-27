@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="xc_body" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+  <!-- Single Fixed Background Image for Entire Page -->
+  <div class="fixed-single-bg-dna">
+    <img src="assets/images/light_dna_bg.webp" alt="3D Translucent DNA Helix Background" class="single-bg-img">
+  </div>
+
+  <!-- Focused Full-Screen 404 Card (No Nav, No Footer) -->
+  <main style="width: 100%; max-width: 680px; padding: 2rem; position: relative; z-index: 1;">
+    <div class="xc_skillscard" style="padding: 3.5rem 2.5rem; text-align: center; border-color: rgba(225, 29, 72, 0.35); background: rgba(255, 255, 255, 0.95); box-shadow: var(--shadow-card-hover);">
+      
+      <!-- Brand Logo Header -->
+      <a href="index.html" class="xc_brand" style="justify-content: center; margin-bottom: 1.5rem;">
+        <img src="assets/images/logo.webp" alt="Stackly Logo" class="brand_logo_img">
+        <span>Stackly</span>
+      </a>
+
+      <div style="font-family: var(--font-heading); font-size: 5.5rem; font-weight: 800; color: #e11d48; line-height: 1;">404</div>
+      
+      <div class="xc_eyebrotext" style="background: #ffe4e6; border-color: #fecdd3; color: #e11d48; margin: 1rem 0;">
+        <i class="fa-solid fa-triangle-exclamation"></i> Telemetry Node Disconnected
+      </div>
+      
+      <h2 class="xc_h2" style="font-size: 1.85rem; margin-bottom: 0.85rem;">Endpoint Not Found</h2>
+      
+      <p class="xc_subheadline" style="font-size: 0.925rem; margin-bottom: 2rem;">
+        The clinical link or requested health telemetry endpoint you attempted to access is currently offline, restricted, or does not exist on the Stackly Network grid.
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="xc_button primary"><i class="fa-solid fa-house"></i> Return to Home</a>
+        <a href="login.html" class="xc_button secondary"><i class="fa-solid fa-user-shield"></i> Access Portal</a>
+      </div>
+
+      <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-muted);">
+        &copy; 2026 Stackly Health Platform Pvt. Ltd. All rights reserved.
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

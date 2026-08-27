@@ -1,0 +1,57 @@
+/* ==========================================================================
+   STACKLY - HIGH-TECH ANIMATIONS & CONIC GLOW ENGINE
+   XCaliber Rotating Borders • Infinite Marquee • Pulse Telemetry
+   ========================================================================== */
+
+/* --- Rotating Conic Beam Glow --- */
+@keyframes borderTurn {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes borderTurnWithTranslate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* --- Infinite Health Network Marquee --- */
+@keyframes marqueeLoop {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Pulse Dot Telemetry --- */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* --- Subtle Float Physics for Floating Cards --- */
+@keyframes cardHoverFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-hover {
+  animation: cardHoverFloat 6s ease-in-out infinite;
+}
